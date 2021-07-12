@@ -1,22 +1,26 @@
 import React from 'react';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
+import { initalTheme, LightTheme, DarkTheme } from '~/_config/theme';
+import { ThemeEnum } from '~/core/enums/theme.enum';
+import useLocalTheme from '~/utilities/hooks/local-theme.hook';
+import Header from '~/shared/components/header';
+import Footer from '~/shared/components/footer';
+import GlobalStyle from '~/styles/global.style';
 
-function App() {
+const App: React.FC = () => {
+  const [theme, setTheme] = useLocalTheme<DefaultTheme>(initalTheme);
+  const toggleTheme = () => {
+    setTheme(theme.name === ThemeEnum.Light ? DarkTheme : LightTheme);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <div className="app-wrapper">
+        <Header toggleTheme={toggleTheme} />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

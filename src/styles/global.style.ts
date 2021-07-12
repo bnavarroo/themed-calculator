@@ -44,13 +44,22 @@ const reset = `
     border-collapse: collapse;
     border-spacing: 0;
   }
+  b, strong {
+    font-weight: bold;
+  }
+  small {
+    font-size: smaller;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
   body {
-    background: red;
+    background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.text};
+    font-size: 16px;
+    font-family: sans-serif;
   }
 `;
 

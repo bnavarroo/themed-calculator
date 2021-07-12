@@ -4,8 +4,8 @@ import { ThemeType } from "~/core/types/theme/theme.type";
 const DarkTheme: ThemeType = {
   name: ThemeEnum.Dark,
   colors: {
-    primary: '#202C39',
-    secondary: '#283845',
+    primary: '#283845',
+    secondary: '#202C39',
     text: '#FFF',
     textOnPrimary: '#FFF',
     textOnSecondary: '#FFF',

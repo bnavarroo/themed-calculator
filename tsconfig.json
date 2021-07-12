@@ -28,5 +28,8 @@
     "node_modules",
     "build",
     "scripts"
+  ],
+  "files": [
+    "src/styles/styled.d.ts"
   ]
 }
