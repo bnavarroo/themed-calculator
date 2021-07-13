@@ -1,10 +1,12 @@
-import { useState, useEffect, Dispatch, SetStateAction } from 'react';
+import { useState, useEffect, Dispatch } from 'react';
 import { themeStorageKey } from '~/_config/theme';
+import { LightTheme, DarkTheme } from '~/_config/theme';
+import { ThemeEnum } from '~/core/enums/theme.enum';
 
-type Response<T> = [
-  T,
-  Dispatch<SetStateAction<T>>,
-];
+type Response<T> = {
+  theme: T,
+  toggleTheme: Dispatch<T>
+};
 
 function useLocalTheme<T>(initialState: T): Response<T> {
 
@@ -13,11 +15,15 @@ function useLocalTheme<T>(initialState: T): Response<T> {
     return storageValue ? JSON.parse(storageValue) : initialState;
   });
 
+  const toggleTheme = () => {
+    setTheme(theme.name === ThemeEnum.Light ? DarkTheme : LightTheme);
+  };
+
   useEffect(() => {
     localStorage.setItem(themeStorageKey, JSON.stringify(theme));
   }, [theme]);
 
-  return [theme, setTheme];
+  return { theme, toggleTheme };
 }
 
 export default useLocalTheme;

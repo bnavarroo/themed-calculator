@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { defaultPadding, breakpointMinDesktop } from '~/styles/global.config';
+import { defaultPadding, breakpointMinDesktop } from '~/styles/constants';
 
 type Props = {
   full?: boolean;
 }
 
-export const Container = styled.div<Props>`
+export const StyledContainer = styled.div<Props>`
   width: calc(100% - ${defaultPadding * 2}px);
   max-width: 100%;
   padding-left: ${defaultPadding}px;

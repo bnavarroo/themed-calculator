@@ -1,16 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, Dispatch } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
-import { shade } from 'polished';
 import { initalTheme } from '~/_config/theme';
 import { ThemeEnum } from '~/core/enums/theme.enum';
-import { Container } from '~/styles/utilities/container.styled';
+import { StyledContainer } from '~/shared/styledComponents/container';
 
-import { HeaderRow } from './styles/header-row.styled';
-import { HeaderCol } from './styles/header-col.styled';
+import { StyledHeader, StyledWrapper, StyledTitle, StyledThemeSwitch } from './styles';
 
 type Props = {
-  toggleTheme: () => void;
+  toggleTheme: Dispatch<any>;
 };
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
@@ -19,14 +17,14 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   const themeText = initalTheme.name === ThemeEnum.Light ? 'Escuro' : 'Claro';
 
   return (
-    <header>
-      <Container>
-        <HeaderRow>
-          <HeaderCol>Calculadora</HeaderCol>
-          <HeaderCol>
-            <div>
+    <StyledHeader>
+      <StyledContainer>
+        <StyledWrapper>
+          <StyledTitle>Calculadora Temática</StyledTitle>
+          <StyledThemeSwitch>
+            <label>
               <small>{themeLabel}</small> Tema {themeText}
-            </div>
+            </label>
             <Switch
               onChange={toggleTheme}
               checked={name !== initalTheme.name}
@@ -35,13 +33,15 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
               height={10}
               width={40}
               handleDiameter={20}
-              offColor={shade(0.5, colors.primary)}
-              onColor={colors.secondary}
+              offColor='#DDD'
+              onColor={colors.tertiary}
+              boxShadow='0px 1px 5px rgba(0, 0, 0, 0.6)' 
+              activeBoxShadow='0px 0px 1px 5px rgba(0, 0, 0, 0.2)'
             />
-          </HeaderCol>
-        </HeaderRow>
-      </Container>
-    </header>
+          </StyledThemeSwitch>
+        </StyledWrapper>
+      </StyledContainer>
+    </StyledHeader>
   );
 };
 

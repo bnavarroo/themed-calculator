@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { defaultPadding } from '~/styles/global.config';
+import { defaultPadding } from '~/styles/constants';
 
-export const Row = styled.div`
+export const StyledRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-left: ${defaultPadding} * -1;
@@ -13,5 +13,3 @@ export const Row = styled.div`
     max-width: 100%;
   }
 `;
-
-export default Row;

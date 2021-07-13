@@ -50,6 +50,9 @@ const reset = `
   small {
     font-size: smaller;
   }
+  header, footer{
+    width: 100%;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -59,7 +62,8 @@ const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.text};
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
   }
 `;
 

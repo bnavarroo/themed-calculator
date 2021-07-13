@@ -6,6 +6,7 @@ const DarkTheme: ThemeType = {
   colors: {
     primary: '#283845',
     secondary: '#202C39',
+    tertiary: '#F29559',
     text: '#FFF',
     textOnPrimary: '#FFF',
     textOnSecondary: '#FFF',

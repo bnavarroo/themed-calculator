@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { FooterStyled } from './styles/footer.styled';
+import { StyledFooter } from './styles';
 
 const Footer: React.FC = () => {
   return (
-    <FooterStyled>
+    <StyledFooter>
       Desenvolvido por <b>Bruno Navarro</b>
-    </FooterStyled>
+    </StyledFooter>
   );
 };
 
