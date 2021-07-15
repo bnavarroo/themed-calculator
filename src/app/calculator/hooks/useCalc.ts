@@ -39,20 +39,19 @@ function useCalc(): useCalcResponse {
   // Calcula o resultado e atualiza display e valor da memoria
   const handleResult = (pauseCalculation: boolean, valueToOperation?: number) : void => {
     let result: number = 0;
-
+    const secondValueToCalc = (valueToOperation ?? parseFloat(displayText));
     switch (actionType) {
       case CalcOperationTypeEnum.Sum:
-        result = valueInMemory + (valueToOperation ?? parseFloat(displayText));
+        result = valueInMemory + secondValueToCalc;
         break;
       case CalcOperationTypeEnum.Subtraction:
-        result = valueInMemory - (valueToOperation ?? parseFloat(displayText));
+        result = valueInMemory - secondValueToCalc;
         break;
       case CalcOperationTypeEnum.Multiplication:
-        result = valueInMemory * (valueToOperation ?? parseFloat(displayText));
+        result = valueInMemory * secondValueToCalc;
         break;
       case CalcOperationTypeEnum.Division:
-        const divisor = (valueToOperation ?? parseFloat(displayText));
-        result = divisor === 0 ? 0 : valueInMemory / (valueToOperation ?? parseFloat(displayText));
+        result = secondValueToCalc === 0 ? 0 : valueInMemory / secondValueToCalc;
         break;
     }
 
