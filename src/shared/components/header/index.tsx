@@ -2,7 +2,7 @@ import React, { useContext, Dispatch } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { initalTheme } from '~/_config/theme';
-import { ThemeEnum } from '~/core/enums/theme.enum';
+import { ThemeEnum } from '~/core/enums/theme/theme.enum';
 import { StyledContainer } from '~/shared/styledComponents/container';
 
 import { StyledHeader, StyledWrapper, StyledTitle, StyledThemeSwitch } from './styles';

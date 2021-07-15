@@ -1,7 +1,7 @@
 import { useState, useEffect, Dispatch } from 'react';
 import { themeStorageKey } from '~/_config/theme';
 import { LightTheme, DarkTheme } from '~/_config/theme';
-import { ThemeEnum } from '~/core/enums/theme.enum';
+import { ThemeEnum } from '~/core/enums/theme/theme.enum';
 
 type Response<T> = {
   theme: T,

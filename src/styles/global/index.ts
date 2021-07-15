@@ -50,9 +50,6 @@ const reset = `
   small {
     font-size: smaller;
   }
-  header, footer{
-    width: 100%;
-  }
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -64,6 +61,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
+  }
+
+  header, footer{
+    width: 100%;
   }
 `;
 

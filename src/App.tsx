@@ -1,10 +1,11 @@
 import React from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import { initalTheme } from '~/_config/theme';
-import useLocalTheme from '~/utilities/hooks/local-theme.hook';
+import useLocalTheme from '~/utilities/hooks/useLocalTheme';
 import Header from '~/shared/components/header';
 import Footer from '~/shared/components/footer';
-import { StyledPageWrapper } from '~/shared/styledComponents/pageWrapper';
+import Calculator from '~/app/calculator';
+import { StyledPageWrapper } from '~/shared/styledComponents/page-wrapper';
 import GlobalStyle from '~/styles/global';
 
 const App: React.FC = () => {
@@ -14,7 +15,7 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <StyledPageWrapper>
         <Header toggleTheme={toggleTheme} />
-        <div>Conteúdo da Página</div>
+        <Calculator />
         <Footer />
       </StyledPageWrapper>
       <GlobalStyle />

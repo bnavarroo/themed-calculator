@@ -1,4 +1,4 @@
-import { ThemeEnum } from "~/core/enums/theme.enum";
+import { ThemeEnum } from "~/core/enums/theme/theme.enum";
 import { ThemeType } from "~/core/types/theme/theme.type";
 
 const DarkTheme: ThemeType = {
@@ -6,7 +6,7 @@ const DarkTheme: ThemeType = {
   colors: {
     primary: '#283845',
     secondary: '#202C39',
-    tertiary: '#F29559',
+    tertiary: '#8AB8B0',
     text: '#FFF',
     textOnPrimary: '#FFF',
     textOnSecondary: '#FFF',
@@ -14,3 +14,4 @@ const DarkTheme: ThemeType = {
 }
 
 export default DarkTheme;
+//CBF7ED
