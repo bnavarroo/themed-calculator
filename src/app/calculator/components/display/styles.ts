@@ -11,6 +11,7 @@ export const StyledDisplay = styled.div`
   text-align: right;
   font-size: 2rem;
   font-weight: 600;
+  word-break: break-all;
 
   small {
     display: block;
