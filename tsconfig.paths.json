@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/*": [ "src/*" ],
+      "~/app*": [ "src/app*" ],
+      "~/config*": [ "src/config*" ],
+      "~/constants*": [ "src/constants*" ],
+      "~/core*": [ "src/core*" ],
+      "~/shared*": [ "src/shared*" ],
+      "~/styles*": [ "src/styles*" ],
+      "~/utilities*": [ "src/utilities*" ]
+    }
+  }
+}

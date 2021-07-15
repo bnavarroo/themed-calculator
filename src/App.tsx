@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
+import { initalTheme } from '~/_config/theme';
+import useLocalTheme from '~/utilities/hooks/useLocalTheme';
+import Calculator from '~/app/calculator';
+import Header from '~/shared/components/header';
+import Footer from '~/shared/components/footer';
+import { StyledPageWrapper } from '~/shared/styledComponents/page-wrapper';
+import { StyledContentPageContainer } from '~/shared/styledComponents/container';
+import GlobalStyle from '~/styles/global';
 
-function App() {
+const App: React.FC = () => {
+  const { theme, toggleTheme } = useLocalTheme<DefaultTheme>(initalTheme);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <StyledPageWrapper>
+        <Header toggleTheme={toggleTheme} />
+        <StyledContentPageContainer>
+          <div className="content-page-wrapper">
+            <Calculator />
+          </div>
+        </StyledContentPageContainer>
+        <Footer />
+      </StyledPageWrapper>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 
