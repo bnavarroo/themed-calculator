@@ -31,6 +31,7 @@ function useCalc(): useCalcResponse {
   const handleValues = (value: number, first: boolean = false) : void => {
     if(first || valueInMemory === 0) {
       setValueInMemory(value);
+      setResult(0);
     } else {
       handleResult(false, value);
     }
@@ -55,6 +56,8 @@ function useCalc(): useCalcResponse {
         break;
     }
 
+    result = parseFloat(result.toFixed(3));
+
     setResult(result);
     setDisplayText(result.toString());
     setValueInMemory(pauseCalculation ? 0 : result);
@@ -74,6 +77,7 @@ function useCalc(): useCalcResponse {
     setResult(0);
     setValueInMemory(0);
     setActionType(null);
+    if(result === 0 && valueInMemory === 0 ) setDisplayText('0');
   }
 
   // Atualiza o visor de operacao sempre que os valores sao alterados
