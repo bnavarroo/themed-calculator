@@ -2,20 +2,7 @@ import styled from "styled-components";
 import { ThemeEnum } from "~/core/enums/theme/theme.enum";
 import { ThemeColorsEnum } from '~/core/enums/theme/theme-colors.enum';
 import { darkenColorTheme } from '~/utilities/functions/colors';
-import { StyledContainer } from '~/shared/styledComponents/container';
 import { percentDarkMap } from '~/app/calculator/constants';
-
-export const StyledCalculatorContainer = styled(StyledContainer)`
-  display: flex;
-  justify-content: center;
-  padding:.5rem;
-`;
-
-export const StyledWrapper = styled.div`
-  width: 100%;
-  max-width: 400px;
-  border: 1px solid ${({theme}) => darkenColorTheme(theme, ThemeColorsEnum.Primary, percentDarkMap[theme.name])};
-`;
 
 export const StyledButton = styled.button`
   width: 100%;
