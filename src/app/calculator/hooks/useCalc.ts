@@ -38,7 +38,24 @@ function useCalc(): useCalcResponse {
 
   // Calcula o resultado e atualiza display e valor da memoria
   const handleResult = (pauseCalculation: boolean, valueToOperation?: number) : void => {
-    const result = valueInMemory + (valueToOperation ?? parseFloat(displayText));
+    let result: number = 0;
+
+    switch (actionType) {
+      case CalcOperationTypeEnum.Sum:
+        result = valueInMemory + (valueToOperation ?? parseFloat(displayText));
+        break;
+      case CalcOperationTypeEnum.Subtraction:
+        result = valueInMemory - (valueToOperation ?? parseFloat(displayText));
+        break;
+      case CalcOperationTypeEnum.Multiplication:
+        result = valueInMemory * (valueToOperation ?? parseFloat(displayText));
+        break;
+      case CalcOperationTypeEnum.Division:
+        const divisor = (valueToOperation ?? parseFloat(displayText));
+        result = divisor === 0 ? 0 : valueInMemory / (valueToOperation ?? parseFloat(displayText));
+        break;
+    }
+
     setResult(result);
     setDisplayText(result.toString());
     setValueInMemory(pauseCalculation ? 0 : result);
@@ -62,12 +79,8 @@ function useCalc(): useCalcResponse {
 
   // Atualiza o visor de operacao sempre que os valores sao alterados
   useEffect(() => {
-    if(result > 0) {
-      setDisplayText(result.toString());  
-    } else {
-      setResetDisplayText(true);
-      setDisplayText(valueInMemory.toString());  
-    }
+    setDisplayText(result.toString());
+    if(result === 0) setResetDisplayText(true);
   }, [result, valueInMemory]);
 
   return {
