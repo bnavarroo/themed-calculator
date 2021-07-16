@@ -44,7 +44,7 @@ A pasta utilities contém todo o código utilitário da aplicação, como funç�
 
 Antes de iniciar, é preciso ter o [Node.js](https://nodejs.org/en/) instalado na máquina e algum gerenciador de pacotes, como [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/). Recomendo o [VSCode](https://code.visualstudio.com/) como editor para trabalhar com o código.
 
-### Scripts
+## 👉 Scripts
 
 Esse projeto foi criado com [Create React App](https://github.com/facebook/create-react-app) e contém os seus scripts padrões. Os principais são:
 
