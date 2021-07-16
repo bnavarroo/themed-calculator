@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# 🚀 Themed Calculator
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee2ca34b-c4e4-4382-a1ae-88427978cfc5/deploy-status)](https://app.netlify.com/sites/themed-calculator-bnavarroo)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Calculadora com as operações padrão: soma, subtração, multiplicação e divisão. Além da calculadora em si é possível alternar/selecionar um tema para visualização (dark ou light).
 
-## Available Scripts
+## ✅ Features
 
-In the project directory, you can run:
+- [x] Operações de adição, subtração, multiplicação e divisão;
+- [x] Seleção de tema: Dark ou Light;
+
+## 🛠 Tecnologias
+
+As principais ferramentas utilizadas para a construção do projeto foram:
+
+- [React](https://pt-br.reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+
+## 🚧 Estrutura Geral do Projeto
+
+
+### `_config`
+A pasta _config contém os arquivos de configurações globais do projeto, como definições de tema e tema padrão.
+
+### `app`
+A pasta app contém os componentes que compõem a aplicação, nesse caso o componente da calculadora. Cada componente está armazenado em uma subpasta que pode ou não posuir além da página em si, seus próprios componentes, styled-componentes, hooks, etc.
+
+### `core`
+A pasta core contém as definições de estrutura global da aplicação: Types, Interfaces, Enum, etc.
+
+### `shared`
+A pasta shared contém os componentes(incluindo styled-components) que são compartilhados na aplicação. Os componentes declarados nessa pasta são independentes e tecnicamente podem ser utilizados em qualquer local do projeto.
+
+### `styles`
+A pasta styles contém definições inerentes aos estilos, de uma maneira geral: estilo global, definição dos temas, definição de breakpoints, etc.
+
+### `utilities`
+A pasta utilities contém todo o código utilitário da aplicação, como funções genéricas, hooks, entre outros.
+
+## Scripts para a execução
+
+### Pré-requisitos
+
+Antes de iniciar, é preciso ter o [Node.js](https://nodejs.org/en/) instalado na máquina e algum gerenciador de pacotes, como [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/). Recomendo o [VSCode](https://code.visualstudio.com/) como editor para trabalhar com o código.
+
+### Scripts
+
+Esse projeto foi criado com [Create React App](https://github.com/facebook/create-react-app) e contém os seus scripts padrões. Os principais são:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Roda a aplicação em modo de desenvolvimento\
+Abra [http://localhost:3000](http://localhost:3000) para visualizar o resultado no navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A página é recarregada sempre que o código é editado.\
+Você poderá ver os erros de no console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para mais informações: [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Gera o Build de produção da aplicação na pasta `build`.\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Mais informações em: [deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Autor
 
-### `npm run eject`
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62071446?s=400&u=851a0c918e6257a6cf47ebdcafa271e67f4503fc&v=4" width="100px;" alt=""/>
+<b>Bruno Navarro de Oliveira</b></sub>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[![Linkedin Badge](https://img.shields.io/badge/-Bruno-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/bruno-navarro-oliveira/)](https://www.linkedin.com/in/bruno-navarro-oliveira/) 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
