@@ -1,5 +1,5 @@
 # 🚀 Themed Calculator
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ee2ca34b-c4e4-4382-a1ae-88427978cfc5/deploy-status)](https://app.netlify.com/sites/themed-calculator-bnavarroo)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee2ca34b-c4e4-4382-a1ae-88427978cfc5/deploy-status)](https://themed-calculator-bnavarroo.netlify.app/)
 
 Calculadora com as operações padrão: soma, subtração, multiplicação e divisão. Além da calculadora em si é possível alternar/selecionar um tema para visualização (dark ou light).
 
